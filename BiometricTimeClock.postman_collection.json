@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "95a13159-8e0d-40d4-8c5b-d1a12290b988",
+		"name": "BiometricTimeClock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19675543"
+	},
+	"item": [
+		{
+			"name": "Create New Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"lastName\": \"New\",\r\n    \"firstName\": \"Employee\",\r\n    \"department\": \"IT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/API/CreateEmp/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"API",
+						"CreateEmp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/API/GetEmp/2023-10-31",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"API",
+						"GetEmp",
+						"2023-10-31"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check-In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"EMPLOYEE_IDENTIFIER\":\"65411e12b6aca45a0a590923\",\r\n    \"COMMENT\":\"Comment is optional\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/API/CheckIn/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"API",
+						"CheckIn",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check-Out",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"65411e5ef629d405b752c3a4\",\r\n    \"COMMENT\":\"This is Comment aftre checko-out\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/API/CheckOut/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"API",
+						"CheckOut",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate duration",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/API/Duration/65411e5ef629d405b752c3a4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"API",
+						"Duration",
+						"65411e5ef629d405b752c3a4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
